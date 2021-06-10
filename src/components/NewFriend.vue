@@ -5,7 +5,7 @@
       <input type="text" v-model="enteredName"/>
     </div>
     <div>
-      <label>Phone</label>
+      <label>Phone Number</label>
       <input type="tel" v-model="enteredPhone" />
     </div>
     <div>
