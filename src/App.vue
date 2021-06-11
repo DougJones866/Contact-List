@@ -127,6 +127,7 @@ header {
   padding: 0.05rem 1rem;
   margin: 3px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+  display:inline-block;
 }
 
 #app button:hover,
@@ -135,6 +136,11 @@ header {
   border-color: #ec3169;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
 }
+#app .delete-button {
+  display:inline-block;
+  
+}
+
 #app input {
   font: inherit;
   padding: 0.15rem;

@@ -9,7 +9,9 @@
       <li><strong>Phone:</strong> {{ phoneNumber }}</li>
       <li><strong>Email:</strong> {{ emailAddress }}</li>
     </ul>
+    <div class ='delete-button'>
     <button @click="$emit('delete', id)">Delete</button>
+    </div>
   </li>
 </template>
 
@@ -70,4 +72,6 @@ export default {
 li {
   background-color: white;
 }
+
+
 </style>
