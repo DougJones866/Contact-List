@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="submitData">
+  <form @submit.prevent="submitData">Enter Contact Information
     <div>
       <label>Name</label>
       <input type="text" v-model="enteredName"/>
@@ -36,4 +36,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+form {
+  background-color: white;
+}
+</style>

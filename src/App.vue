@@ -1,6 +1,6 @@
 <template>
   <section>
-    <header><h1>My Friends</h1></header>
+    <header><h1>Contacts</h1></header>
     <new-friend @add-contact="addContact"></new-friend>
     <ul>
       <friend-contact
@@ -12,6 +12,7 @@
         :email-address="friend.email"
         v-bind:is-favorite="friend.isFavorite"
         @toggle-favorite="toggleFavoriteStatus"
+        @delete="deleteContact"
       ></friend-contact>
     </ul>
   </section>
@@ -57,6 +58,9 @@ export default {
         isFavorite: false,
       };
       this.friends.push(newFriendContact);
+    },
+    deleteContact(friendId) {
+      this.friends = this.friends.filter(friend => friend.id !== friendId);
     }
   }
 };
@@ -75,6 +79,7 @@ html {
 
 body {
   margin: 0;
+  background-image: url("assets/lilypads.png");
 }
 
 header {
@@ -120,6 +125,7 @@ header {
   background-color: #ff0077;
   color: white;
   padding: 0.05rem 1rem;
+  margin: 3px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
 }
 
